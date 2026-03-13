@@ -20,9 +20,9 @@ public class NinjaController {
     }
 
     //Adicionar Ninja      (CREATE)
-    @PostMapping ("/criar")
-    public  String criarNinja(){
-        return "Ninja criado com sucesso";
+    @PostMapping("/criar")
+    public NinjaModel criarNinja(@RequestBody NinjaModel ninja){
+        return ninjaService.criarNinja(ninja);
     }
 
     // MOSTRAR TODOS OS NINJAS    (READ)
@@ -41,10 +41,11 @@ public class NinjaController {
     public String alterarNinjaPorId(){
         return "Altererar Ninja por Id";
     }
+
     // DELETAR NINJA            (DELETE)
-    @DeleteMapping ("/deletarID")
-    public String deletarNinjaPorId(){
-        return "Ninja deletado por Id";
+    @DeleteMapping ("/deletar/{id}")
+    public void deletarNinjaPorId(@PathVariable Long Id){
+        ninjaService.deletarNinjaPorId(Id);
     }
 
 }
