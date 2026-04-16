@@ -17,3 +17,15 @@ A **Ninja Missions API** é um projeto de estudo voltado à prática de desenvol
 - Migrations com Flyway
 ## 🧱 Stack utilizada
 - **Java 21**, **Spring Boot 3.4.3**, **Spring Data JPA**, **H2**, **Flyway**, **MapStruct**, **Lombok**
+## ⚙️ Configuração local
+O projeto está configurado para usar **H2** com parâmetros vindos de variáveis de ambiente.
+## ▶️ Como executar
+```bash
+git clone https://github.com/vineog23-boop/ninja-missions-api.git
+cd ninja-missions-api
+mvn clean install
+mvn spring-boot:run
+```
+### Acesso local
+- Aplicação: http://localhost:8080
+- Console H2: http://localhost:8080/h2-console
